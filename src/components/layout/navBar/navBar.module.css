@@ -1,0 +1,60 @@
+.nav {
+    display: flex;
+    justify-content: center;
+
+}
+
+.image {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+}
+
+.nav ul {
+    display: flex;
+    position: absolute;
+    top: 4vh;
+    right: 5vh;
+
+}
+
+.nav ul li {
+    list-style: none;
+    border : 2px solid var(--brown-dark);
+    border-right : none;
+    padding: 0.5em 1em;
+    margin: 0;
+    background-image: linear-gradient(var(--terracota), var(--terracota));
+    background-repeat: no-repeat;
+    background-size: 100% 0 ;
+    background-position: top;
+    transition: background-size 400ms ease-in-out;
+}
+
+.nav ul li:hover{
+
+    background-size: 100% 100%;
+    color: var(--white-platinium);
+}
+
+.nav ul li:last-child {
+    border-right : 2px solid var(--brown-dark);
+
+}
+
+.link{
+    font-family: var(--paragraph-font), sans-serif;
+    color : var(--brown-medium);
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.nav ul li:hover .link {
+    color: var(--white-platinium);
+}
+
+.active {
+    background-color: var(--terracota);
+    color: var(--white-platinium);
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id" : 1,
+    "label" : "Accueil",
+    "link" : "#home"
+  },
+  {
+    "id" : 2,
+    "label" : "Prestations",
+    "link" : "#services"
+  },
+  {
+    "id" : 3,
+    "label" : "Process",
+    "link" : "#process"
+  },
+  {
+    "id" : 4,
+    "label" : "Un projet ?",
+    "link" : "#contact"
+  },
+  {
+    "id" : 5,
+    "label" : "Réalisations",
+    "link" : "#projects"
+  },
+  {
+    "id" : 6,
+    "label" : "A propos",
+    "link" : "#about"
+  },
+  {
+    "id" : 7,
+    "label" : "Offres",
+    "link" : "#offers"
+  }
+]

@@ -4,12 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .header article:first-child{
     margin-left: 1em;
     width: 52vw;
+}
 
+.header article{
+    margin-top : 5vh
 }
 
 .h1{
