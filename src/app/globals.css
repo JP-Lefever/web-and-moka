@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'barosa';
+  src: url('/fonts/barosa.ttf');
+}
+
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -20,13 +26,9 @@
   --beige-dark : #8B8000;
   --brown-dark : #502000;
   --terracota : #B2542B;
-  --margin : 1.5vh 2vw;
-  --large-radius : 30px;
-  --small-radius : 10px;
-  --margin-top : 2vh 0;
-  --letter-spacing : 0.2em;
-  --title-responsive : 3em;
+
   --title-size : 4em;
+
 
 }
 body{
