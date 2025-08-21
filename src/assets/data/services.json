@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Briefing",
+    "image": "",
+    "description": "Chez Web & Moka, on commence par discuter de votre projet autour d’un café. On échange sur votre entreprise, vos objectifs, vos valeurs et vos besoins pour bien cerner votre univers."
+  },
+  {
+    "id": 1,
+    "name": "Conseil & Stratégie",
+    "image": "",
+    "description": "On discute des meilleures options pour votre site : fonctionnalités, parcours utilisateur, et priorités pour que votre présence en ligne soit efficace et cohérente."
+  },
+  {
+    "id": 2,
+    "name": "Design & UX",
+    "image": "",
+    "description": "Je transforme votre identité (couleurs, typographies, style graphique) en une maquette que vous pouvez visualiser et ajuster. Cela vous permet de vous projeter et de valider le style avant de passer au développement."
+  },
+  {
+    "id": 3,
+    "name": "Développement sur mesure",
+    "image": "",
+    "description": "La magie commence et votre maquette prend vie : un site web fluide,  rapide et accessible sur tous les appareils. Chaque détail est pensé pour offrir une expérience agréable à vos utilisateurs."
+  },
+  {
+    "id": 4,
+    "name": "SEO & Visibilité",
+    "image": "",
+    "description": "Dès la mise en ligne, votre site est optimisé pour être visible sur les moteurs de recherche et attirer vos futurs visiteurs de manière naturelle."
+  },
+  {
+    "id": 5,
+    "name": "Mise en production & Support",
+    "image": "",
+    "description": "Le site est mis en ligne et je reste à vos côtés pour tout ajustement, optimisation ou assistance. Votre site évolue avec votre projet, toujours prêt à refléter vos besoins et vos ambitions."
+  }
+]
+
