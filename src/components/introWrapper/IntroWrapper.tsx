@@ -1,15 +1,26 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
+import styles from "./introWrapper.module.css"
 import dynamic from "next/dynamic";
 
 const IntroScreen = dynamic(() => import("@/components/introScreen/IntroScreen"), {
     ssr: false,
+    loading: () => <section className={styles.loader}/>,
 });
 
-export default function IntroWrapper() {
+export default function IntroWrapper({ children }: { children: React.ReactNode }) {
     const [introDone, setIntroDone] = useState(false);
 
-    if (introDone) return null;
+    return (
+        <section className={styles.section}>
 
-    return <IntroScreen onFinishAction={() => setIntroDone(true)} />;
+            {children}
+
+            {!introDone && (
+                <article className={styles.article}>
+                    <IntroScreen onFinishAction={() => setIntroDone(true)} />
+                </article>
+            )}
+        </section>
+    );
 }

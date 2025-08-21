@@ -9,12 +9,11 @@ export default function HomePage() {
 
 
     return (
-        <>
 
-            <NavBar />
-            <Header />
+            <IntroWrapper >
+                <NavBar />
+                <Header />
+           </IntroWrapper>
 
-           <IntroWrapper />
-        </>
     );
 }
