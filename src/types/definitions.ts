@@ -6,3 +6,10 @@ export type buttonProps = {
     children : React.ReactNode
 
 }
+
+export type ServicesProps = {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+}
