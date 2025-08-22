@@ -1,0 +1,55 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30em;
+    height: 70vh;
+
+
+    margin: 10px;
+
+    /*transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+}
+
+.imageContainer{
+    position: relative;
+    border : solid 8px black;
+    width: 25vw;
+    min-height: 80vh;
+    margin: 1em auto ;
+    padding-top: 1em;
+    background-color: white;
+}
+
+.image {
+    object-fit: cover;
+    padding: 1em;
+}
+
+
+
+/*.card:hover {*/
+/*    transform: translateY(-5px);*/
+/*    box-shadow: 0 8px 20px rgba(0,0,0,0.3);*/
+/*}*/
+
+
+
+/*.overlay {*/
+/*    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);*/
+/*    color: white;*/
+/*    padding: 10px;*/
+
+/*    width: 100%;*/
+/*}*/
+
+/*.title {*/
+/*    font-size: 1rem;*/
+/*    font-weight: bold;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.year {*/
+/*    font-size: 0.8rem;*/
+/*    opacity: 0.8;*/
+/*}*/

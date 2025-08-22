@@ -1,3 +1,4 @@
+import styles from "./cardProcess.module.css"
 import Image from "next/image";
 import {ServicesProps} from "@/types/definitions";
 
@@ -7,10 +8,14 @@ export default function CardProcess({service} : {service : ServicesProps}){
 const {name, image, description} = service;
 
     return (
-        <article>
-            <Image src={image} alt={name} width={1024} height={1280} />
-            <h2>{name}</h2>
-            <p>{description}</p>
+        <article className={styles.card}>
+            <figure className={styles.imageContainer}>
+                <Image className={styles.image} src={image} alt={name} fill={true} />
+            </figure>
+
+                <h2 className={styles.title}>{name}</h2>
+                <p className={styles.year}>{description}</p>
+
         </article>
     )
 }

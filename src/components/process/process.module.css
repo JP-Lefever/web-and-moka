@@ -1,0 +1,7 @@
+.sectionCard{
+    display: flex;
+    gap: 1em;
+    padding: 20px;
+    background-color: yellow;
+    min-height: 100vh;
+}
