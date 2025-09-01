@@ -1,7 +1,40 @@
+.div{
+    background-color: black;
+}
+
+.section{
+    background-repeat: no-repeat;
+
+    min-width: 300vw;
+}
+
+.articleCard{
+    border-right: solid 1px black;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .sectionCard{
     display: flex;
     gap: 1em;
     padding: 20px;
     background-color: yellow;
-    min-height: 100vh;
+    margin-left: 15vw;
+    height: 85vh;
+    align-items: center;
+
+}
+
+
+
+.h1{
+    background-color: yellow;
+    font-family: var(--paragraph-font), sans-serif;
+    font-size: var(--title-size);
+    border-bottom: solid 1px black;
+    height: 15vh;
+    display: flex;
+    align-items: center;
 }
