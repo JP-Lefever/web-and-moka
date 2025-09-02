@@ -2,7 +2,8 @@
     position: relative;
     width: 120vw;
     overflow: hidden;
-    background-color: black;
+    background-image: url("/images/black.webp");
+    background-size: cover;
 
 }
 

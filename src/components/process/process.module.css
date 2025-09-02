@@ -17,13 +17,11 @@
 
 }
 
-
-
 .sectionCard{
     display: flex;
     padding: 20px;
     background-color: yellow;
-    margin-left: 10vw;
+    margin-left: 15vw;
     height: 85vh;
     align-items: center;
 
@@ -39,6 +37,7 @@
     height: 15vh;
     display: flex;
     align-items: center;
+    padding-left: 0.5em;
 
 
 }
