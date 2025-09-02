@@ -1,11 +1,9 @@
-.div{
-    background-color: black;
-}
+
 
 .section{
     background-repeat: no-repeat;
-
-    min-width: 300vw;
+    position: relative;
+    width: 100vw;
 }
 
 .articleCard{
@@ -14,14 +12,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 45vw;
+    background-color: yellow;
+
 }
+
+
 
 .sectionCard{
     display: flex;
-    gap: 1em;
     padding: 20px;
     background-color: yellow;
-    margin-left: 15vw;
+    margin-left: 10vw;
     height: 85vh;
     align-items: center;
 
@@ -29,7 +31,7 @@
 
 
 
-.h1{
+.h2{
     background-color: yellow;
     font-family: var(--paragraph-font), sans-serif;
     font-size: var(--title-size);
@@ -37,4 +39,6 @@
     height: 15vh;
     display: flex;
     align-items: center;
+
+
 }
