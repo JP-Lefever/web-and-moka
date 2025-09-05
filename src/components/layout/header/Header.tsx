@@ -3,6 +3,7 @@ import styles from "./header.module.css"
 import dataHeader from "@/assets/data/header.json"
 import {useEffect, useMemo, useRef, useState} from "react";
 import gsap from "gsap";
+import PixelParticule from "@/components/ui/pixelParticules/PixelParticule";
 
 export default function Header() {
 
@@ -39,13 +40,18 @@ export default function Header() {
 
 
     return <>
-        <header id={"header"} className={styles.header}>
+        <header className={styles.header}>
 
             <article>
                 <h3 className={styles.slogans}>{dataHeader.title} <span ref={ref} className={styles.span}>{slogans[index]}</span></h3>
                 <h3 className={styles.h3}>{dataHeader.description}</h3>
                 <h3 className={styles.subtitle}>{dataHeader.subTitle}</h3>
                 {/*<Link className={styles.link} href={""}>{dataHeader.button}</Link>*/}
+            </article>
+            <article>
+                {Array.from({length : 80}).map((_,i) =>(
+                    <PixelParticule key={i}/>
+                    ))}
             </article>
 
         </header>

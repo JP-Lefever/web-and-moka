@@ -1,22 +1,26 @@
 .header{
     background-color: var(--black-nuance );
     overflow-x: hidden;
-    min-height: 90vh;
-    height: auto;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
 }
 
-.header article{
+.header article:first-child{
     line-height: 7.5em;
     width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top : 10vh
 }
 
+.header article:last-child{
+    height: 2vh;
+}
 
 .h2 {
     font-family: var(--title-font2), sans-serif;
@@ -52,7 +56,6 @@
     font-family: var(--title-font2), sans-serif;
     font-size: 6vw;
     color: var(--beige-orange);
-
     text-align: center;
 }
 

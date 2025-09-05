@@ -19,7 +19,7 @@ export default function HomePage() {
                </IntroWrapper>
             </header>
             <main>
-                <section id={"process"}>
+                <section>
                     <Process />
                 </section>
             </main>
