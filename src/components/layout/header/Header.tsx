@@ -1,30 +1,53 @@
+"use client"
 import styles from "./header.module.css"
 import dataHeader from "@/assets/data/header.json"
-import Link from "next/link";
-import Image from "next/image";
-import PixelParticle from "@/components/ui/pixelParticules/PixelParticule";
+import {useEffect, useMemo, useRef, useState} from "react";
+import gsap from "gsap";
 
 export default function Header() {
 
 
+    const [index, setIndex] = useState(0);
+
+    const slogans = useMemo(()=>["créatifs", "performants", "interactifs", "modernes", "responsives"],[]);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!ref.current) return;
+
+            gsap.to(ref.current, {
+                y: -20,
+                opacity : 0,
+                duration : 0.5,
+                ease : "power2.in",
+                onComplete : ()=>{
+                    setIndex(prev => (prev + 1) % slogans.length);
+
+
+            gsap.fromTo(
+                ref.current,
+                {opacity:0, },
+                {opacity:1, duration:1, ease : "power2.out"},
+            )
+        }
+            });},2000)
+        return ()=>clearInterval(interval)
+    },[slogans.length]);
+
+
+
+
     return <>
         <header id={"header"} className={styles.header}>
-            <article>
-                <figure className={styles.figure}>
-                    <Image className={styles.image} src={"/images/web-moka-neon.png"} width={1024} height={860} alt={"logo entreprise, gobelet de café pc à la main, casque a la tete, avec inscrit le nom de l'entreprise web & moka"}/>
-                </figure>
-                <h2 className={styles.h2}>{dataHeader.subTitle}</h2>
-            </article>
-            <article id={"particles"}>
-                {Array.from({length: 80}).map((_, i) => (
-                    <PixelParticle key={i}/>
-                ))}
-            </article>
-            <article>
 
+            <article>
+                <h3 className={styles.slogans}>{dataHeader.title} <span ref={ref} className={styles.span}>{slogans[index]}</span></h3>
                 <h3 className={styles.h3}>{dataHeader.description}</h3>
-                <Link className={styles.link} href={""}>{dataHeader.button}</Link>
+                <h3 className={styles.subtitle}>{dataHeader.subTitle}</h3>
+                {/*<Link className={styles.link} href={""}>{dataHeader.button}</Link>*/}
             </article>
+
         </header>
 
     </>

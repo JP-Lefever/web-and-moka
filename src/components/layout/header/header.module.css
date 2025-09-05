@@ -1,83 +1,60 @@
 .header{
-    background-color: var(--blue-coin );
-
-
+    background-color: var(--black-nuance );
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 90vh;
     height: auto;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
-
-
-.image{
-    display: block;
-    width : 40vw;
-    height : 80vh;
-    z-index: 2;
-    margin-left: 5vw;
-
+.header article{
+    line-height: 7.5em;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .h2 {
-    font-family: var(--title-font), sans-serif;
+    font-family: var(--title-font2), sans-serif;
     font-size: 6em;
     font-weight: lighter;
     color : var(--cream );
     position: relative;
-    bottom: 15vh;
+
     left: 5vw;
     animation : neon 12s infinite;
 }
+.slogans {
+    font-family: var(--title-font2), sans-serif;
+    font-size: 6vw;
+    color: white;
+    text-align: center;
+    width: 50vw;
+}
+
+.span {
+    color : var(--beige-orange)
+}
 
 .h3 {
-    font-family: var(--paragraph-font), sans-serif;
-    font-size: 3em;
+    font-family: var(--title-font2), sans-serif;
+    font-size: 6vw;
     color: white;
+    text-align: center;
+    width: 40vw;
 }
 
-.header article:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 35vw;
+.subtitle {
+    font-family: var(--title-font2), sans-serif;
+    font-size: 6vw;
+    color: var(--beige-orange);
 
-    align-items: center;
-    margin: 5vh auto;
+    text-align: center;
 }
-/*.figure {*/
-/*    background-image: url("/images/logo.png");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: contain;*/
-/*    z-index: 3;*/
-/*    height : 8vh;*/
-/*    width : 5vw;*/
-/*    margin-left : 5em;*/
-
-
-/*}*/
-
-/*.image2 {*/
-/*    filter: drop-shadow(0 0 0 white)    !* contour blanc *!*/
-/*    drop-shadow(2px 2px 5px rgba(0,0,0,0.3)); !* ombre douce *!*/
-/*    border-radius: 8px; !* optionnel *!*/
-/*    position : relative;*/
-/*    bottom: 2vh;*/
-/*    right : 25vw;*/
-/*    rotate: -10deg;*/
-/*    z-index : 1;*/
-
-/*}*/
-
-/*.h1{*/
-/*    font-family: var(--title-font), sans-serif;*/
-/*    font-size: 10em;*/
-/*    letter-spacing: 0.1em;*/
-/*    color : var(--brown-dark);*/
-
-/*}*/
-
 
 .link {
     display: block;

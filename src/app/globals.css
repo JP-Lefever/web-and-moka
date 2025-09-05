@@ -2,6 +2,10 @@
   font-family: 'barosa';
   src: url('/fonts/barosa.ttf');
 }
+@font-face {
+  font-family: 'neue';
+  src: url('/fonts/NeueBold.ttf');
+}
 
 
 *{
@@ -30,8 +34,10 @@
   --red : #E55139;
   --title-size : 4em;
   --blue-coin : #181E29;
-
+  --black-nuance : #161616;
+  --title-font2 : "neue", sans-serif;
 }
+
 body{
   overflow-x: hidden;
   max-width: 100vw;

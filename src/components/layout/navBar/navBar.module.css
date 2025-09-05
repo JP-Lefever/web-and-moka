@@ -1,14 +1,22 @@
 .nav {
     display: flex;
-    justify-content: center;
-    position: fixed;
-    z-index: 1;
-    right: 10vh;
-    top: 2vh;
+    justify-content: space-between;
+    background-color: var(--black-nuance);
+    align-items: center;
+
 }
+
+.figure {
+    margin-left: 2vw;
+}
+
 
 .nav ul {
     display: flex;
+    position: fixed;
+    z-index: 1;
+    right: 2vw;
+    top: 3vh;
 }
 
 .nav ul li {
@@ -35,17 +43,18 @@
 
 }
 .link{
-    font-family: var(--paragraph-font), sans-serif;
+    font-family: var(--title-font2), sans-serif;
+    font-size: 1.1em;
     color : var(--beige-orange);
     text-decoration: none;
     font-weight: bold;
 }
 
 .nav ul li:hover .link {
-    color: var(--white-platinium);
+    color: var(--black-nuance);
 }
 
 .active {
-    background-color: black;
-    color: var(--white-platinium);
+    background-color: var(--red);
+    color: var(--black-nuance);
 }

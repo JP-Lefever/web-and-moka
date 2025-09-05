@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import React from "react";
-import {paragraphFont, titleFont} from "@/components/ui/fonts";
+import {paragraphFont, subtitle, titleFont} from "@/components/ui/fonts";
 import NavBar from "@/components/layout/navBar/NavBar";
 
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${titleFont.variable} ${paragraphFont.variable}`}>
+      <body className={`${titleFont.variable} ${paragraphFont.variable} ${subtitle.variable}`}>
         <NavBar/>
         {children}
       </body>
