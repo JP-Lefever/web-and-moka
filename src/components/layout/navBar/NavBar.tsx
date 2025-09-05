@@ -16,11 +16,6 @@ export default function NavBar() {
         <>
             <nav className={styles.nav}>
                 <section>
-                    <Link href="/">
-                        <Image className={styles.image} src={"/images/logo.png"} alt={"logo entreprise"} width={120} height={120} />
-                    </Link>
-                </section>
-                <section>
                     <ul>
                         {dataNav.map((item) => (
                             <li className={clsx(styles.link,{

@@ -1,0 +1,22 @@
+.particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    opacity: 0;
+    animation: flicker 2s infinite ease-in-out, floatUp 6s infinite linear;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}

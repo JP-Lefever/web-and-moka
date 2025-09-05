@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import {paragraphFont, titleFont} from "@/components/ui/fonts";
+import NavBar from "@/components/layout/navBar/NavBar";
 
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${titleFont.variable} ${paragraphFont.variable}`}>
+        <NavBar/>
         {children}
       </body>
     </html>

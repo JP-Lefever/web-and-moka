@@ -15,6 +15,7 @@
   --beige-light : #F5F5DC;
   --cream :#FAE0BC;
   --beige-red :#DEB887;
+  --beige-orange : #FCD946;
   --brown-light : #D2B48C;
   --beige-gold : #E6C229;
   --white-platinium : #DDE2E4;
@@ -26,9 +27,9 @@
   --beige-dark : #8B8000;
   --brown-dark : #502000;
   --terracota : #B2542B;
-
+  --red : #E55139;
   --title-size : 4em;
-
+  --blue-coin : #181E29;
 
 }
 body{

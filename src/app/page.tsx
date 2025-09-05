@@ -1,8 +1,9 @@
 
-import NavBar from "@/components/layout/navBar/NavBar";
+
 import Header from "@/components/layout/header/Header";
 import IntroWrapper from "@/components/introWrapper/IntroWrapper";
 import Process from "@/components/process/Process";
+import HeaderAnimation from "@/components/ui/headerAnimation/HeaderAnimation";
 
 
 
@@ -14,13 +15,15 @@ export default function HomePage() {
         <>
             <header>
                 <IntroWrapper >
-                    <NavBar />
                     <Header />
                </IntroWrapper>
             </header>
             <main>
-                <Process/>
+                <section id={"process"}>
+                    <Process />
+                </section>
             </main>
+            <HeaderAnimation/>
         </>
     );
 }
