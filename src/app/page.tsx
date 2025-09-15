@@ -3,7 +3,7 @@ import styles from "./page.module.css"
 import Header from "@/components/layout/header/Header";
 import IntroWrapper from "@/components/introWrapper/IntroWrapper";
 import Process from "@/components/process/Process";
-import HeaderAnimation from "@/components/ui/headerAnimation/HeaderAnimation";
+
 
 
 
@@ -20,13 +20,13 @@ export default function HomePage() {
             </header>
             <main>
                <section className={styles.sec}>
-                   <h1>A Propos</h1>
+                   <h1>{"A Propos"}</h1>
                </section>
                 <section id={"process"}>
                     <Process />
                 </section>
             </main>
-            <HeaderAnimation/>
+
         </>
     );
 }

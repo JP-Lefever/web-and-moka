@@ -18,7 +18,7 @@ export default function Header() {
     const videoRef = useRef(null)
     const headerRef = useRef(null)
 
-    // Changement automatique du mot
+    // Change word
     useEffect(() => {
         const interval = setInterval(() => {
             if (!wordRef.current) return
@@ -40,7 +40,7 @@ export default function Header() {
         return () => clearInterval(interval)
     }, [slogans.length])
 
-    // Timeline scroll : texte + vidéo
+    // Timeline scroll : text + vidéo
     useEffect(() => {
         if (!headerRef.current || !textRef.current || !videoRef.current) return
 
