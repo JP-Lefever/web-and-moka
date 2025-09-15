@@ -3,24 +3,9 @@ import styles from "./introScreen.module.css";
 import { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&é(-è_çà)=^$*ù!:;,?.<>";
-const phrases = ["Welcome", "to", "Web", "&", "Moka"];
+export default function IntroScreen({onFinishAction}: { onFinishAction: () => void }) {
 
-function scrambleText(text: string, progress: number) {
-    return text
-        .split("")
-        .map((char, i) => {
-            if (i < progress) return char;
-            return characters[Math.floor(Math.random() * characters.length)];
-        })
-        .join("");
-}
-
-export default function IntroScreen({ onFinishAction }: { onFinishAction: () => void }) {
     const [mounted, setMounted] = useState(false);
-    const [step, setStep] = useState(0);
-    const [progress, setProgress] = useState(0);
     const [showPanels, setShowPanels] = useState(false);
 
     const panelCount = 32;
@@ -30,27 +15,14 @@ export default function IntroScreen({ onFinishAction }: { onFinishAction: () => 
 
     useEffect(() => {
         if (!mounted) return;
+        const timer = setTimeout(() => setShowPanels(true), 2500);
+        return () => clearTimeout(timer);
+    }, [mounted]);
 
-        if (step < phrases.length) {
-            if (progress < phrases[step].length) {
-                const timeout = setTimeout(() => setProgress(progress + 1), 60);
-                return () => clearTimeout(timeout);
-            } else {
-                const delay = setTimeout(() => {
-                    setStep(step + 1);
-                    setProgress(0);
-                }, 600);
-                return () => clearTimeout(delay);
-            }
-        } else {
-            const endDelay = setTimeout(() => setShowPanels(true), 200);
-            return () => clearTimeout(endDelay);
-        }
-    }, [mounted, progress, step]);
 
     useEffect(() => {
         if (showPanels) {
-            const totalTime = panelCount * 0.02 * 1000 ;
+            const totalTime = panelCount * 0.02 * 1000;
             const timeout = setTimeout(() => onFinishAction(), totalTime);
             return () => clearTimeout(timeout);
         }
@@ -68,7 +40,7 @@ export default function IntroScreen({ onFinishAction }: { onFinishAction: () => 
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.1 }}
                 >
-                    {scrambleText(phrases[step] || "", progress)}
+                    <p className={styles.p}>Loading...</p>
                 </motion.div>
             ) : (
                 <motion.div key="panels" className={styles.panelsWrapper}>
@@ -96,5 +68,3 @@ export default function IntroScreen({ onFinishAction }: { onFinishAction: () => 
         </AnimatePresence>
     );
 }
-
-
