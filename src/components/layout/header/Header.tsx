@@ -1,60 +1,92 @@
 "use client"
+import { useEffect, useMemo, useRef, useState } from "react"
 import styles from "./header.module.css"
 import dataHeader from "@/assets/data/header.json"
-import {useEffect, useMemo, useRef, useState} from "react";
-import gsap from "gsap";
-import PixelParticule from "@/components/ui/pixelParticules/PixelParticule";
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Header() {
 
+    const [index, setIndex] = useState(0)
 
-    const [index, setIndex] = useState(0);
+    const slogans = useMemo(() => ["créatifs", "performants", "interactifs", "modernes", "responsives"], [])
 
-    const slogans = useMemo(()=>["créatifs", "performants", "interactifs", "modernes", "responsives"],[]);
-    const ref = useRef(null);
+    const wordRef = useRef(null)
+    const textRef = useRef(null)
+    const videoRef = useRef(null)
+    const headerRef = useRef(null)
 
+    // Changement automatique du mot
     useEffect(() => {
         const interval = setInterval(() => {
-            if (!ref.current) return;
-
-            gsap.to(ref.current, {
+            if (!wordRef.current) return
+            gsap.to(wordRef.current, {
                 y: -20,
-                opacity : 0,
-                duration : 0.5,
-                ease : "power2.in",
-                onComplete : ()=>{
-                    setIndex(prev => (prev + 1) % slogans.length);
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.in",
+                onComplete: () => {
+                    setIndex((prev) => (prev + 1) % slogans.length)
+                    gsap.fromTo(
+                        wordRef.current,
+                        { opacity: 0, y: 20 },
+                        { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
+                    )
+                },
+            })
+        }, 2000)
+        return () => clearInterval(interval)
+    }, [slogans.length])
+
+    // Timeline scroll : texte + vidéo
+    useEffect(() => {
+        if (!headerRef.current || !textRef.current || !videoRef.current) return
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: headerRef.current,
+                start: "top top",
+                end: "+=200%",
+                scrub: true,
+                pin: true,
+            },
+        })
 
 
-            gsap.fromTo(
-                ref.current,
-                {opacity:0, },
-                {opacity:1, duration:1, ease : "power2.out"},
-            )
+        tl.to(textRef.current, { y: -800, opacity: 0, ease: "power1.out" }, 0)
+
+        tl.to(videoRef.current, { scale: 1.05, y: -400, ease: "power1.out" }, 0)
+
+        return () => {
+            if (tl) tl.kill()
+            ScrollTrigger.getAll().forEach(st => st.kill && st.kill())
         }
-            });},2000)
-        return ()=>clearInterval(interval)
-    },[slogans.length]);
+    }, [])
 
+    return (
+        <header ref={headerRef} className={styles.header}>
 
-
-
-    return <>
-        <header className={styles.header}>
-
-            <article>
-                <h3 className={styles.slogans}>{dataHeader.title} <span ref={ref} className={styles.span}>{slogans[index]}</span></h3>
-                <h3 className={styles.h3}>{dataHeader.description}</h3>
-                <h3 className={styles.subtitle}>{dataHeader.subTitle}</h3>
-                {/*<Link className={styles.link} href={""}>{dataHeader.button}</Link>*/}
+            <article className={styles.videoWrapper}>
+                <video
+                    ref={videoRef}
+                    className={styles.video}
+                    src="/videos/loop.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
             </article>
-            <article>
-                {Array.from({length : 80}).map((_,i) =>(
-                    <PixelParticule key={i}/>
-                    ))}
+
+            <article ref={textRef} className={styles.textBlock}>
+                <h3 className={styles.slogans}>
+                    {dataHeader.title} <span ref={wordRef}>{slogans[index]}</span>
+                </h3>
+                <h3 className={styles.h3}>{dataHeader.description}</h3>
             </article>
 
         </header>
-
-    </>
+    )
 }

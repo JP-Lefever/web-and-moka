@@ -1,10 +1,4 @@
-import {Barriecito, Inter, IBM_Plex_Sans} from "next/font/google"
-
-export const titleFont = Barriecito({
-    weight : "400",
-    subsets : ["latin"],
-    variable: "--title-font"
-})
+import { Inter, Castoro_Titling} from "next/font/google"
 
 export const paragraphFont = Inter({
     weight : "400",
@@ -12,8 +6,8 @@ export const paragraphFont = Inter({
     variable: "--paragraph-font"
 })
 
-export const subtitle = IBM_Plex_Sans({
-    weight : "700",
+export const subtitle = Castoro_Titling({
+    weight : "400",
     subsets : ["latin"],
     variable: "--subtitle-font"
 })

@@ -16,24 +16,11 @@
 }
 
 :root{
-  --beige-light : #F5F5DC;
-  --cream :#FAE0BC;
-  --beige-red :#DEB887;
   --beige-orange : #FCD946;
-  --brown-light : #D2B48C;
-  --beige-gold : #E6C229;
   --white-platinium : #DDE2E4;
   --white-pure : #ffffff;
-  --brown-medium : #964B00;
-  --beige-grey : #C2B280;
-  --brown-red : #8B4513;
-  --cream-red : #F5D0C8;
-  --beige-dark : #8B8000;
-  --brown-dark : #502000;
-  --terracota : #B2542B;
   --red : #E55139;
   --title-size : 4em;
-  --blue-coin : #181E29;
   --black-nuance : #161616;
   --title-font2 : "neue", sans-serif;
 }
