@@ -3,6 +3,7 @@ import styles from "./page.module.css"
 import Header from "@/components/layout/header/Header";
 import IntroWrapper from "@/components/introWrapper/IntroWrapper";
 import Process from "@/components/process/Process";
+import About from "@/components/about/About";
 
 
 
@@ -13,14 +14,14 @@ export default function HomePage() {
 
     return (
         <>
-            <header id={"home"}>
+            <header>
                 <IntroWrapper >
                     <Header />
                </IntroWrapper>
             </header>
             <main>
-               <section className={styles.sec}>
-                   <h1>{"A Propos"}</h1>
+               <section id={"about"} >
+                   <About/>
                </section>
                 <section id={"process"}>
                     <Process />
