@@ -13,7 +13,7 @@
     width : 50%;
     display: flex;
     flex-direction: column;
-    font-family: var(--paragraph-font),sans-serif;
+    font-family: var(--title-font2),sans-serif;
     padding: 1em;
     font-size: 1.2em;
     font-weight: bold;
@@ -22,7 +22,7 @@
 }
 
 .title{
-    font-family: var(--paragraph-font),sans-serif;
+    font-family: var(--title-font2),sans-serif;
     font-size: 3em;
     padding-left: 0.4em;
 }
