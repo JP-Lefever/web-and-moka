@@ -72,7 +72,7 @@ export default function Header() {
                 <video
                     ref={videoRef}
                     className={styles.video}
-                    src="/videos/loop.mp4"
+                    src="/videos/loopi.mp4"
                     autoPlay
                     loop
                     muted
