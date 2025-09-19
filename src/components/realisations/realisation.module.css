@@ -1,0 +1,43 @@
+.sectionProject {
+    position: relative;
+    height: 100vh;
+    background-image: url("/images/bureau.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: auto 0 ;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: var(--title-font2), sans-serif;
+    font-size: 4em;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--white-platinium);
+}
+
+.li{
+    width: 100vw;
+}
+
+
+.ul li.active{
+    border-top: 2px solid var(--white-platinium);
+    border-bottom: 2px solid var(--white-platinium);
+    cursor: pointer;
+    font-family: var(--subtitle-font), sans-serif;
+}
+

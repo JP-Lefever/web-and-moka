@@ -1,0 +1,30 @@
+[
+  {
+    "id" : 1,
+    "label" : "Camping",
+    "image" : "",
+    "description" : "",
+    "link" : ""
+  },
+  {
+    "id" : 2,
+    "label" : "EFFCA",
+    "image" : "",
+    "description" : "",
+    "link" : ""
+  },
+  {
+    "id" : 3,
+    "label" : "L'enclos",
+    "image" : "",
+    "description" : "",
+    "link" : ""
+  },
+  {
+    "id" : 4,
+    "label" : "Portfolio",
+    "image" : "",
+    "description" : "",
+    "link" : ""
+  }
+]
