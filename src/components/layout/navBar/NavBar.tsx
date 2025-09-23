@@ -3,12 +3,32 @@
 import styles from "./navBar.module.css"
 import Image from "next/image";
 import dataNav from "@/assets/data/navBar.json"
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import clsx from "clsx";
 
 export default function NavBar() {
 
     const [activeSection, setActiveSection] = useState<string>("")
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(`#${entry.target.id}`);
+                    }
+                });
+            },
+            {  rootMargin: "-40% 0px -40% 0px" }
+        );
+
+        dataNav.forEach((item) => {
+            const el = document.querySelector(item.link); // item.link = "#about"
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
 
     return (
