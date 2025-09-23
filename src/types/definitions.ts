@@ -13,3 +13,11 @@ export type ServicesProps = {
     image: string;
     description: string;
 }
+
+export type ProjectProps = {
+    id: number;
+    label : string;
+    image: string;
+    description: string;
+    link: string;
+}
