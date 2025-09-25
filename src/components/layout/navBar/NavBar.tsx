@@ -23,8 +23,8 @@ export default function NavBar() {
         );
 
         dataNav.forEach((item) => {
-            const el = document.querySelector(item.link); // item.link = "#about"
-            if (el) observer.observe(el);
+            const element = document.querySelector(item.link);
+            if (element) observer.observe(element);
         });
 
         return () => observer.disconnect();

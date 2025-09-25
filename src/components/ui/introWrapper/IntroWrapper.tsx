@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./introWrapper.module.css"
 import dynamic from "next/dynamic";
 
-const IntroScreen = dynamic(() => import("@/components/introScreen/IntroScreen"), {
+const IntroScreen = dynamic(() => import("@/components/ui/introScreen/IntroScreen"), {
     ssr: false,
     loading: () => <section className={styles.loader}/>,
 });
