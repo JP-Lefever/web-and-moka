@@ -2,16 +2,6 @@
   "services": [
     {
       "id" : 1,
-      "name": "Site vitrine",
-      "price": "À partir de 499€",
-      "scope": "1–5 pages",
-      "responsive": "Adapté aux mobiles et tablettes",
-      "design_ux": "UX & Design sur-mesure",
-      "seo": "Référencement naturel",
-      "timeline": "1–4 semaines"
-    },
-    {
-      "id" : 2,
       "name": "Refonte & optimisation",
       "price": "À partir de 1499€",
       "scope": "Audit complet + refonte des pages principales",
@@ -20,28 +10,26 @@
       "seo": "Optimisation du référencement",
       "timeline": "3–5 semaines"
     },
+
     {
-      "id" : 3,
-      "name": "E-commerce",
-      "price": "À partir de 3499€",
-      "scope": "Catalogue d’articles + panier + paiement",
+      "id" : 2,
+      "name": "Site vitrine",
+      "price": "À partir de 499€",
+      "scope": "1–5 pages",
       "responsive": "Adapté aux mobiles et tablettes",
       "design_ux": "UX & Design sur-mesure",
-      "seo": "Optimisation du référencement",
-      "payment": "Paiement et facturation inclus",
-      "api": "Transporteurs / ERP en option",
-      "timeline": "4–10 semaines"
+      "seo": "Référencement naturel",
+      "timeline": "1–4 semaines"
     },
+
     {
-      "id" : 4,
+      "id" : 3,
       "name": "Développement sur mesure",
       "price": "Sur devis",
       "scope": "Pages illimitées et fonctionnalités personnalisées",
       "responsive": "Adapté aux mobiles et tablettes",
       "design_ux": "UX & Design sur-mesure",
       "seo": "Optimisation du référencement",
-      "payment": "Paiement et facturation selon besoins",
-      "api": "Intégration d'API selon besoins",
       "timeline": "Délais selon projet"
     }
   ]
