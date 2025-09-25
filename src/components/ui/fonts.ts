@@ -1,7 +1,7 @@
 import { Inter, Castoro_Titling} from "next/font/google"
 
 export const paragraphFont = Inter({
-    weight : "400",
+    weight : ["400", "600"],
     subsets : ["latin"],
     variable: "--paragraph-font"
 })

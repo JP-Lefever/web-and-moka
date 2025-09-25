@@ -21,3 +21,20 @@ export type ProjectProps = {
     description: string;
     link: string;
 }
+
+export type CostServicesProps = {
+    id: number;
+    name: string;
+    price: string;
+    scope: string;
+    responsive: string;
+    design_ux: string;
+    seo: string;
+    timeline: string;
+    payment?: string;
+    api?: string;
+}
+
+export type CostProps = {
+    services : CostServicesProps[];
+}

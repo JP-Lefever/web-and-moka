@@ -1,3 +1,4 @@
-.sec {
-    height: 100vh;
+.cost {
+    width: 100vw;
+    background-color: var(--black-nuance);
 }
