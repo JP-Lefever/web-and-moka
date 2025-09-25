@@ -1,0 +1,46 @@
+{
+  "prestations": [
+    {
+      "nom": "Site vitrine",
+      "tarif": "À partir de 499€",
+      "perimetre": "1–5 pages",
+      "responsive": "Adapté aux mobiles et tablettes",
+      "design_ux": "UX & Design sur-mesure",
+      "seo": "Référencement naturel",
+      "delais": "1–4 semaines"
+    },
+    {
+      "nom": "Refonte & optimisation",
+      "tarif": "À partir de 1499€",
+      "perimetre": "Audit complet + refonte des pages principales",
+      "responsive": "Adapté aux mobiles et tablettes",
+      "design_ux": "UX & Design sur-mesure",
+      "seo": "Optimisation du référencement",
+      "delais": "3–5 semaines"
+    },
+    {
+      "nom": "E-commerce",
+      "tarif": "À partir de 3499€",
+      "perimetre": "Catalogue d’articles + panier + paiement",
+      "responsive": "Adapté aux mobiles et tablettes",
+      "design_ux": "UX & Design sur-mesure",
+      "seo": "Optimisation du référencement",
+      "paiement_facturation": "Paiement et facturation inclus",
+      "integrations_api": "Transporteurs / ERP en option",
+      "delais": "4–10 semaines"
+
+    },
+    {
+      "nom": "Développement sur mesure",
+      "tarif": "Sur devis",
+      "perimetre": "Pages illimitées et fonctionnalités personnalisées",
+      "responsive": "Adapté aux mobiles et tablettes",
+      "design_ux": "UX & Design sur-mesure",
+      "seo": "Optimisation du référencement",
+      "paiement_facturation": "Paiement et facturation selon besoins",
+      "integrations_api": "Intégration d'API selon besoins",
+      "delais": "Délais selon projet"
+
+    }
+  ]
+}
